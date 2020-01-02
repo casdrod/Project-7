@@ -1,0 +1,250 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    background-color: #6A6CCF;
+    color: white;
+}
+
+/**** Header Section ****/
+h1 {
+    margin: auto auto auto 10px;
+    font-size: 24px;
+}
+
+.bell {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.bell-svg {
+    display: block;
+    border-right: .5px solid white;
+    padding: 10px;
+}
+
+.user-name {
+    margin-right: 10px;
+}
+
+/**** Link Styles ****/
+a {
+    text-decoration: none;
+}
+
+/**** Main Header ****/
+.main-header {
+    display: flex;
+}
+
+.headline {
+    padding: 15px;
+    margin: 0;
+    border-right: .75px solid black;
+    border-bottom: none;
+    line-height: 45px;
+}
+
+/**** Search Bar ****/
+.main-header-search {
+    margin: auto 20px auto auto;
+    padding: 10px;
+    width: 40%;
+}
+
+.main-header-search input {
+    padding: 10px;
+    width: 100%;
+    border: 0.5px solid black;
+    border-radius: 6px;
+    vertical-align: middle;
+}
+
+.main-header-search input:focus {
+    border: 1px solid #6A6CCF;
+    border-radius: 6px;
+    outline: none;
+}
+
+/**** Nav Section ****/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #194265;
+    margin: 0;
+}
+
+.nav-icon {
+    padding: 15px;
+}
+
+/**** Traffic Section ****/
+.traffic {
+    padding: 10px;
+    border-top: .75px solid black;
+}
+
+.traffic h3 {
+    margin: auto auto auto 15px;
+}
+
+.traffic-header {
+    display: flex;
+}
+
+.traffic-nav {
+    display: flex;
+}
+
+.traffic-nav-link {
+    list-style: none;
+    margin: 10px;
+}
+
+#traffic-chart {
+    margin: 20px auto;
+}
+
+/**** Social Section ****/
+.social {
+    display: flex;
+}
+
+.social-image {
+    margin: auto 0;
+}
+
+.social-container {
+    display: flex;
+    margin: 20px;
+    flex-grow: 1;
+}
+
+/**** Daily Traffic Section ****/
+.daily {
+    border: .75px solid black;
+    border-left: none;
+    padding: 10px;
+}
+
+/**** Mobile Users Section ****/
+.mobile-users {
+    padding: 10px;
+    border: .75px solid black;
+    border-left: none;
+    border-right: none;
+}
+
+/**** New Members Section ****/
+.members {
+    border-top: .75px solid black;
+    border-bottom: none;
+    padding: 10px;
+}
+
+.members p {
+    margin: 0;
+}
+
+.members-container {
+    display: flex;
+    padding: 10px;
+    border-bottom: .5px solid black;
+}
+
+.members-container:last-child {
+    border: none;
+}
+
+.members-text {
+    margin: 10px auto 10px 5px;
+    vertical-align: middle;
+}
+
+.members-container p {
+    margin: auto 0;
+}
+
+/**** Recent Activity Section ****/
+.recent-activity {
+    border-top: .75px solid black;
+    border-left: none;
+    padding: 10px;
+}
+
+.recent-activity p {
+    margin: auto 0;
+}
+
+.activity {
+    display: flex;
+    padding: 10px;
+    border-bottom: .5px solid black;
+    line-height: 20px;
+}
+
+.activity:last-child {
+    border: none;
+}
+
+.activity-text {
+    margin: 10px auto 10px 5px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+/**** Message Section ****/
+.message {
+    border-top: .75px solid black;
+    padding: 10px;
+}
+
+.form-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: .6px solid #CECECE;
+    border-radius: 5px;
+    background: #F4F4F4;
+}
+
+.form-field:focus {
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-area {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: .6px solid #CECECE;
+    border-radius: 5px;
+    background: #F4F4F4;
+}
+
+.form-area:focus {
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="text"],
+textarea {
+    box-sizing: border-box;
+}
+
+/**** Settings Section ****/
+.settings {
+    border-top: .75px solid black;
+    padding: 10px;
+}

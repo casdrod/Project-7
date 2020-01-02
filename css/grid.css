@@ -1,12 +1,12 @@
 /**** GRID AND FLEXBOX ****/
-
+/**** OUTSIDE GRID ****/
 .container {
     display: grid;
-    grid-template-columns: 150px 3fr;
+    grid-template-columns: 100%;
     grid-template-areas: 
-        "header header"
-        "nav main";
-    background: pink;
+        "header"
+        "nav"
+        "main";
 }
 
 header {
@@ -19,6 +19,98 @@ nav {
 
 main {
     grid-area: main;
-
 }
 
+/**** MAIN GRID ****/
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "dashboard"
+        "alert"
+        "traffic"
+        "top-line-graph"
+        "daily-traffic"
+        "mobile-users"
+        "social"
+        "members"
+        "activity"
+        "message"
+        "settings";
+}
+
+/*Dashboard and Search Bar*/
+.main-header {
+    grid-area: dashboard;
+}
+
+/*Alert Bar*/
+.alert {
+    grid-area: alert;
+}
+
+/*Traffic Title and Timely Links*/
+.traffic {
+    grid-area: traffic;
+}
+
+/*Top Line Graph*/
+.widget-container-full {
+    grid-area: top-line-graph;
+}
+
+/*Daily Traffic Area*/
+.daily {
+    grid-area: daily-traffic;
+}
+
+.mobile-users {
+    grid-area: mobile-users;
+}
+
+.social {
+    grid-area: social;
+}
+
+.members {
+    grid-area: members;
+}
+
+.recent-activity {
+    grid-area: activity;
+}
+
+.message {
+    grid-area: message;
+}
+
+.settings {
+    grid-area: settings;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 65px 1fr;
+        grid-template-areas: 
+            "header header"
+            "nav main";
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "dashboard dashboard"
+            "alert alert"
+            "traffic traffic"
+            "top-line-graph top-line-graph"
+            "daily-traffic mobile-users"
+            "social social"
+            "members activity"
+            "message settings"
+    }
+
+    nav {
+        display: inline;
+    }
+}
