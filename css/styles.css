@@ -82,6 +82,11 @@ nav {
     padding: 15px;
 }
 
+/**** Charts Section ****/
+.widget-container-full, .widget-container-half {
+    width: 90vw;
+}
+
 /**** Traffic Section ****/
 .traffic {
     padding: 10px;
@@ -105,9 +110,9 @@ nav {
     margin: 10px;
 }
 
-#traffic-chart {
-    margin: 20px auto;
-}
+/* #traffic-chart {
+    margin: 20px;
+} */
 
 /**** Social Section ****/
 .social {
@@ -120,7 +125,7 @@ nav {
 
 .social-container {
     display: flex;
-    margin: 20px;
+    padding: 15px;
     flex-grow: 1;
 }
 
@@ -152,7 +157,7 @@ nav {
 
 .members-container {
     display: flex;
-    padding: 10px;
+    /* padding: 10px; */
     border-bottom: .5px solid black;
 }
 
@@ -172,7 +177,6 @@ nav {
 /**** Recent Activity Section ****/
 .recent-activity {
     border-top: .75px solid black;
-    border-left: none;
     padding: 10px;
 }
 
@@ -182,7 +186,7 @@ nav {
 
 .activity {
     display: flex;
-    padding: 10px;
+    /* padding: 10px; */
     border-bottom: .5px solid black;
     line-height: 20px;
 }

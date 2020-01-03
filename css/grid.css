@@ -88,6 +88,7 @@ main {
     grid-area: settings;
 }
 
+/**** Media Queries ****/
 @media (min-width: 768px) {
     .container {
         grid-template-columns: 65px 1fr;
@@ -112,5 +113,19 @@ main {
 
     nav {
         display: inline;
+    }
+
+    /*** Styles ***/
+    .recent-activity {
+        border-left: .75px solid black;
+    }
+
+    .widget-container-full {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .widget-container-half {
+        width: 45vw;
     }
 }
