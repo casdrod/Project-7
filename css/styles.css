@@ -5,6 +5,7 @@
 
 header {
     display: flex;
+    flex-wrap: wrap;
     background-color: #6A6CCF;
     color: white;
 }
@@ -18,6 +19,7 @@ h1 {
 .bell {
     margin: 0 15px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -39,10 +41,12 @@ a {
 /**** Main Header ****/
 .main-header {
     display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0.75px solid black;
 }
 
 .headline {
-    padding: 15px;
+    padding: 10px;
     margin: 0;
     border-right: .75px solid black;
     border-bottom: none;
@@ -52,7 +56,6 @@ a {
 /**** Search Bar ****/
 .main-header-search {
     margin: auto 20px auto auto;
-    padding: 10px;
     width: 40%;
 }
 
@@ -73,6 +76,7 @@ a {
 /**** Nav Section ****/
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-color: #194265;
     margin: 0;
@@ -82,15 +86,39 @@ nav {
     padding: 15px;
 }
 
+/**** Alert Banner ****/
+.alert {
+    padding: 15px;
+    display: flex;
+    background-color: #6A6CCF;
+    color: white;
+    border-radius: 5px;
+    margin: 15px auto 0 auto;
+    width: calc(100% - 85px);
+    height: 20px;
+}
+
+.alert p:first-child {
+    margin: 0 auto 0 0;
+}
+
+.alert p:last-child {
+    margin: 0;
+}
+
+.alert-banner-close:hover {
+    cursor: pointer;
+}
+
 /**** Charts Section ****/
 .widget-container-full, .widget-container-half {
     width: 90vw;
+    margin: auto;
 }
 
 /**** Traffic Section ****/
 .traffic {
     padding: 10px;
-    border-top: .75px solid black;
 }
 
 .traffic h3 {
@@ -99,24 +127,35 @@ nav {
 
 .traffic-header {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .traffic-nav {
     display: flex;
+    flex-wrap: wrap;
+    /* margin: 20px 0; */
 }
 
 .traffic-nav-link {
     list-style: none;
-    margin: 10px;
+    margin: 5px;
+    padding: 4px;
 }
 
-/* #traffic-chart {
-    margin: 20px;
-} */
+/**** Active Nav Link ****/
+.active {
+    background-color: #77DC3D;
+    color: red;
+    border-radius: 10px;
+    font-weight: 700;
+    transition-property: all;
+    transition-duration: 1s;
+}
 
 /**** Social Section ****/
 .social {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .social-image {
@@ -125,6 +164,7 @@ nav {
 
 .social-container {
     display: flex;
+    flex-wrap: wrap;
     padding: 15px;
     flex-grow: 1;
 }
@@ -157,8 +197,13 @@ nav {
 
 .members-container {
     display: flex;
+    flex-wrap: wrap;
     /* padding: 10px; */
     border-bottom: .5px solid black;
+}
+
+.members-container a {
+    font-size: 14px;
 }
 
 .members-container:last-child {
