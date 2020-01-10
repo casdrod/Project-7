@@ -129,7 +129,7 @@ const weekly__lineChart__data = {
 };
 
 const hourly__lineChart__data = {
-    labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+    labels: ['8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM'],
     datasets: [{
         label: '',
         data: [500, 720, 1000, 600, 1750, 1250, 1000, 800, 1200, 1000, 800],
@@ -154,10 +154,10 @@ const hourly__lineChart__data = {
 };
 
 const daily__lineChart__data = {
-    labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+    labels: ['S', 'M', 'T', 'W', 'TH', 'F', 'S'],
     datasets: [{
         label: '',
-        data: [850, 1200, 1300, 1250, 1650, 1050, 1000, 2000, 1550, 1000, 900],
+        data: [850, 1200, 1300, 1250, 1650, 1050, 1000],
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -179,10 +179,10 @@ const daily__lineChart__data = {
 };
 
 const monthly__lineChart__data = {
-    labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+    labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEPT', 'OCT', 'NOV', 'DEC'],
     datasets: [{
         label: '',
-        data: [1000, 900, 1500, 1250, 1100, 700, 950, 1000, 1750, 1000, 1400],
+        data: [1000, 900, 1500, 1250, 1100, 700, 950, 1000, 1750, 1000, 1400, 2000],
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -233,7 +233,7 @@ const barChart__data = {
 var dntChart__data = {
     datasets: [{
         data: [15, 10, 40],
-        backgroundColor: ['rgba(211, 45, 23, 1)', 'rgb(252, 255, 45)', 'rgb(82, 45, 255)']
+        backgroundColor: ['#56D93D', '#6A6CCF', '#194265']
     }],
     labels: [
         ' Phones',

@@ -120,6 +120,10 @@ main {
         border-bottom: none;
     }
 
+    .social-text {
+        margin-left: 15px;
+    }
+
     .daily {}
 
     .mobile-users {

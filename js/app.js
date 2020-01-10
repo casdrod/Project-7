@@ -31,27 +31,28 @@ for (var i = 0; i < btns.length; i++) {
 
 /* Adding Data to Chart Function */
 function addData(chart, label, data) {
-    chart.data.datasets.forEach((dataset) => {
-      dataset.data.push(data);
-    });
+    chart.data.labels = label;
+    chart.data.datasets[0].data = data;
     chart.update();
 }
 
 
 /* Changing chart data */
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-        if (this.classList.contains("hourly_chart")) {
-            addData(hourly_line_chart, hourly_line_chart.data.labels, hourly_line_chart.data.datasets);
-        } else if (this.classList.contains("monthly_chart")) {
-            addData(monthly_line_chart, monthly_line_chart.data.labels, monthly_line_chart.data.datasets);
-        } else if (this.classList.contains("weekly_chart")) {
-            addData(weekly_line_chart, weekly_line_chart.data.labels, weekly_line_chart.data.datasets);
-        } else if (this.classList.contains("daily_chart")) {
-            addData(daily_line_chart, daily_line_chart.data.labels, daily_line_chart.data.datasets);        } else if (this.classList.contains(daily_chart)) {
+const trafficNav = document.querySelector('.traffic-nav');
+trafficNav.addEventListener('click', e => {
+    if (e.target.tagName === 'LI') {
+        let button = e.target;
+        if (button.textContent === 'Hourly') {
+             addData(hourly_line_chart, hourly__lineChart__data.labels, hourly__lineChart__data.datasets[0].data);
+        } else if (button.textContent === 'Daily') {
+             addData(daily_line_chart, daily__lineChart__data.labels, daily__lineChart__data.datasets[0].data);        
+        }  else if (button.textContent === 'Weekly') {
+             addData(weekly_line_chart, weekly__lineChart__data.labels, weekly__lineChart__data.datasets[0].data);      
+        } else if (button.textContent === 'Monthly') {
+             addData(monthly_line_chart, monthly__lineChart__data.labels, monthly__lineChart__data.datasets[0].data);
         }
-    });
-}
+    }
+});
 
 
 
