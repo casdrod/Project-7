@@ -26,12 +26,12 @@ const lineChart__options = {
     scales: {
         xAxes: [{
             gridLines: {
-                offsetGridLines: true
+                // offsetGridLines: true
             }
         }],
         yAxes: [{
             gridLines: {
-                offsetGridLines: true
+                // offsetGridLines: true
             },
             ticks: {
                 min: 250,
@@ -40,9 +40,6 @@ const lineChart__options = {
                 beginAtZero: true
             }
         }]
-    },
-    animation: {
-        easing: 'linear'
     }
 }
 
@@ -243,14 +240,6 @@ var dntChart__data = {
 }
 
 
-const weekly_lineChart = $('#line_charts');
-let weekly_line_chart = doChart(weekly_lineChart, {
-    type: 'line',
-    data: weekly__lineChart__data,
-    options: lineChart__options
-});
-
-
 const hourly_lineChart = $('#line_charts');
 let hourly_line_chart = doChart(hourly_lineChart, {
     type: 'line',
@@ -269,6 +258,13 @@ const monthly_lineChart = $('#line_charts');
 let monthly_line_chart = doChart(monthly_lineChart, {
     type: 'line',
     data: monthly__lineChart__data,
+    options: lineChart__options
+});
+
+const weekly_lineChart = $('#line_charts');
+let weekly_line_chart = doChart(weekly_lineChart, {
+    type: 'line',
+    data: weekly__lineChart__data,
     options: lineChart__options
 });
 
