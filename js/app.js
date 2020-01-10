@@ -1,12 +1,12 @@
 /* Alert Banner */
 $('#alert').hide();
-$('#alert').slideDown(2000);
+$('#alert').slideDown(1500);
 
 const alertBanner = document.getElementById("alert");
 
 alertBanner.innerHTML = 
     `<p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-    <p class="alert-banner-close">x</p>`;
+    <p class="alert-banner-close">X</p>`;
 
 alertBanner.addEventListener('click', e => {
     const element = e.target;
@@ -29,19 +29,28 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
-/* Change canvas ID to change chart data */
+/* Adding Data to Chart Function */
+function addData(chart, label, data) {
+    chart.data.datasets.forEach((dataset) => {
+      dataset.data.push(data);
+    });
+    chart.update();
+}
+
+
+/* Changing chart data */
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
-        if (this.classList.contains(hourly_chart)) {
-            canvas.id = "hourly_chart";
-        } else if (this.classList.contains(daily_chart)) {
-            canvas.id = "daily_chart";
-        } else if (this.classList.contains(monthly_chart)) {
-            canvas.id = "monthly_chart";
-        } else if (this.classList.contains(weekly_chart)) {
-            canvas.id = "weekly_chart";
+        if (this.classList.contains("hourly_chart")) {
+            addData(hourly_line_chart, hourly_line_chart.data.labels, hourly_line_chart.data.datasets);
+        } else if (this.classList.contains("monthly_chart")) {
+            addData(monthly_line_chart, monthly_line_chart.data.labels, monthly_line_chart.data.datasets);
+        } else if (this.classList.contains("weekly_chart")) {
+            addData(weekly_line_chart, weekly_line_chart.data.labels, weekly_line_chart.data.datasets);
+        } else if (this.classList.contains("daily_chart")) {
+            addData(daily_line_chart, daily_line_chart.data.labels, daily_line_chart.data.datasets);        } else if (this.classList.contains(daily_chart)) {
         }
-    })
+    });
 }
 
 

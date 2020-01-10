@@ -40,6 +40,9 @@ const lineChart__options = {
                 beginAtZero: true
             }
         }]
+    },
+    animation: {
+        easing: 'linear'
     }
 }
 
@@ -68,9 +71,31 @@ const barChart__options = {
     }
 }
 
-// var dntChart__options = {
-
-// }
+var dntChart__options = {
+    legend: {
+        position: 'right',
+        labels: {
+            boxWidth: 25
+        }
+    },
+    scales: {
+        xAxes: [{
+            display: false,
+            gridLines: {
+                display: false
+            }
+        }],
+        yAxes: [{
+            display: false,
+            gridLines: {
+                display: false
+            },
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+}
 
 
 /* ****************** /
@@ -132,7 +157,7 @@ const daily__lineChart__data = {
     labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
     datasets: [{
         label: '',
-        data: [750, 1100, 1500, 1250, 1750, 1250, 2000, 1000, 1750, 1000, 800],
+        data: [850, 1200, 1300, 1250, 1650, 1050, 1000, 2000, 1550, 1000, 900],
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -183,7 +208,7 @@ const barChart__data = {
     labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
         datasets: [{
             label: '',
-            data: [750, 800, 950, 1100, 900, 1250, 2000, 1300, 1500, 1400, 800],
+            data: [75, 100, 175, 125, 225, 200, 100],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -204,33 +229,43 @@ const barChart__data = {
         }]
 };
 
-// var dntChart__data = {
+/* Donut Chart */
+var dntChart__data = {
+    datasets: [{
+        data: [15, 10, 40],
+        backgroundColor: ['rgba(211, 45, 23, 1)', 'rgb(252, 255, 45)', 'rgb(82, 45, 255)']
+    }],
+    labels: [
+        ' Phones',
+        ' Tablets',
+        ' Desktop'
+    ]
+}
 
-// }
 
-
-const weekly_lineChart = $('#weekly_chart');
+const weekly_lineChart = $('#line_charts');
 let weekly_line_chart = doChart(weekly_lineChart, {
     type: 'line',
     data: weekly__lineChart__data,
     options: lineChart__options
 });
 
-const hourly_lineChart = $('#hourly_chart');
+
+const hourly_lineChart = $('#line_charts');
 let hourly_line_chart = doChart(hourly_lineChart, {
     type: 'line',
     data: hourly__lineChart__data,
     options: lineChart__options
 });
 
-const daily_lineChart = $('#daily_chart');
+const daily_lineChart = $('#line_charts');
 let daily_line_chart = doChart(daily_lineChart, {
     type: 'line',
     data: daily__lineChart__data,
     options: lineChart__options
 });
 
-const monthly_lineChart = $('#monthly_chart');
+const monthly_lineChart = $('#line_charts');
 let monthly_line_chart = doChart(monthly_lineChart, {
     type: 'line',
     data: monthly__lineChart__data,
@@ -240,16 +275,16 @@ let monthly_line_chart = doChart(monthly_lineChart, {
 
 
 const barChart = $("#daily-chart");
-let ChartB = doChart(barChart, {
+let bar_chart = doChart(barChart, {
     type: "bar",
     data: barChart__data,
     options: barChart__options
 });
 
 
-// const dntChart = $("#users-chart");
-// let ChartC = doChart(dntChart, {
-//     type: "doughnut",
-//     data: dntChart__data,
-//     options: dntChart__options
-// });
+const dntChart = $("#users-chart");
+let dnt_chart = doChart(dntChart, {
+    type: "doughnut",
+    data: dntChart__data,
+    options: dntChart__options
+});

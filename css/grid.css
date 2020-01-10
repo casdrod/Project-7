@@ -115,6 +115,18 @@ main {
         display: inline;
     }
 
+    .nav-icon:first-child {
+        border-left: 3px solid limegreen;
+        border-bottom: none;
+    }
+
+    .daily {}
+
+    .mobile-users {
+        border-top: .75px solid black;
+        border-left: .75px solid black;
+    }
+
     .recent-activity {
         border-left: .75px solid black;
     }
@@ -129,6 +141,5 @@ main {
 
     .settings {
         border-left: 0.75px solid black;
-
     }
 }

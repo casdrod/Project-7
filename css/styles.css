@@ -29,8 +29,18 @@ h1 {
     padding: 10px;
 }
 
+.user_image {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 5px; 
+}
+
 .user-name {
-    margin-right: 10px;
+    margin: auto 10px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
 }
 
 /**** Link Styles ****/
@@ -46,7 +56,7 @@ a {
 }
 
 .headline {
-    padding: 10px;
+    padding: 10px 15px;
     margin: 0;
     border-right: .75px solid black;
     border-bottom: none;
@@ -65,6 +75,7 @@ a {
     border: 0.5px solid black;
     border-radius: 6px;
     vertical-align: middle;
+    background-color: #F6F6F6;
 }
 
 .main-header-search input:focus {
@@ -86,6 +97,11 @@ nav {
     padding: 15px;
 }
 
+.nav-icon:first-child {
+    border-bottom: 3px solid limegreen;
+    border-radius: 2px;
+}
+
 /**** Alert Banner ****/
 .alert {
     padding: 15px;
@@ -96,24 +112,34 @@ nav {
     margin: 15px auto 0 auto;
     width: calc(100% - 85px);
     height: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .alert p:first-child {
-    margin: 0 auto 0 0;
+    margin: auto auto auto 0;
 }
 
-.alert p:last-child {
-    margin: 0;
+.alert-banner-close {
+    margin: auto 0 auto auto;
 }
 
 .alert-banner-close:hover {
     cursor: pointer;
 }
 
+.label {
+    margin: 15px auto 15px 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
 /**** Charts Section ****/
 .widget-container-full, .widget-container-half {
     width: 90vw;
-    margin: auto;
+    margin: 20px auto 15px auto;
 }
 
 /**** Traffic Section ****/
@@ -122,7 +148,7 @@ nav {
 }
 
 .traffic h3 {
-    margin: auto auto auto 15px;
+    margin: auto auto auto 5px;
 }
 
 .traffic-header {
@@ -155,35 +181,72 @@ nav {
 }
 
 /**** Social Section ****/
-.social {
+.containers_for_social {
     display: flex;
     flex-wrap: wrap;
 }
 
+.social {
+    display: block;
+    padding: 10px;
+}
+
 .social-image {
-    margin: auto 0;
+    margin: auto 10px;
+    border: 1px solid #6A6CCF;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: #6A6CCF;
+    width: 40px;
+    height: 40px;
+}
+
+.twitter-icon,
+.google-icon {
+    display: flex;
+    margin: 8px auto auto auto;
 }
 
 .social-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 15px;
+    padding: 5px;
     flex-grow: 1;
+    border: 0.5px solid black;
+    margin: 10px;
+    background-color: #F6F6F6
+}
+
+.social-text {
+    margin-left: 15px;
+}
+
+.social-text p:first-child {
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #6A6CCF;
+}
+
+.social-text p:last-child {
+    font-size: 40px;
+    font-weight: 200;
+    margin: 0 0 15px 0;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 }
 
 /**** Daily Traffic Section ****/
 .daily {
     border: .75px solid black;
     border-left: none;
+    border-right: none;
     padding: 10px;
 }
 
 /**** Mobile Users Section ****/
 .mobile-users {
     padding: 10px;
-    border: .75px solid black;
-    border-left: none;
-    border-right: none;
+    border-bottom: .75px solid black;
 }
 
 /**** New Members Section ****/
