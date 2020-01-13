@@ -12,7 +12,7 @@ header {
 
 /**** Header Section ****/
 h1 {
-    margin: auto auto auto 15px;
+    margin: 10px auto 10px 10px;
     font-size: 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -69,7 +69,6 @@ a {
 .main-header {
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 0.75px solid black;
 }
 
 .headline {
@@ -83,16 +82,18 @@ a {
 
 /**** Search Bar ****/
 .main-header-search {
-    margin: auto 20px auto auto;
-    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    border-bottom: 0.75px solid black;
 }
 
 .main-header-search input {
+    width: 70%;
     padding: 10px;
-    width: 100%;
+    margin: auto 15px auto auto;
     border: 0.5px solid black;
     border-radius: 6px;
-    vertical-align: middle;
     background-color: #F6F6F6;
 }
 

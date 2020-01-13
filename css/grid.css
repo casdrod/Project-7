@@ -147,3 +147,9 @@ main {
         border-left: 0.75px solid black;
     }
 }
+
+@media (min-width: 1024px) {
+    .main-header-search input {
+        width: 50%;
+    }
+}
