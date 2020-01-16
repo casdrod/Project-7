@@ -125,6 +125,31 @@ const weekly__lineChart__data = {
     }]
 };
 
+const weekly__lineChart__data__copy = {
+    labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+    datasets: [{
+        label: '',
+        data: [750, 1100, 1500, 1250, 1750, 1350, 2000, 1000, 1750, 1000, 800],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+    }]
+};
+
 const hourly__lineChart__data = {
     labels: ['8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM'],
     datasets: [{
@@ -240,26 +265,28 @@ var dntChart__data = {
 }
 
 
-const hourly_lineChart = $('#line_charts');
-let hourly_line_chart = doChart(hourly_lineChart, {
-    type: 'line',
-    data: hourly__lineChart__data,
-    options: lineChart__options
-});
+// const hourly_lineChart = $('#line_charts');
+// let hourly_line_chart = doChart(hourly_lineChart, {
+//     type: 'line',
+//     data: hourly__lineChart__data,
+//     options: lineChart__options
+// });
 
-const daily_lineChart = $('#line_charts');
-let daily_line_chart = doChart(daily_lineChart, {
-    type: 'line',
-    data: daily__lineChart__data,
-    options: lineChart__options
-});
+// const daily_lineChart = $('#line_charts');
+// let daily_line_chart = doChart(daily_lineChart, {
+//     type: 'line',
+//     data: daily__lineChart__data,
+//     options: lineChart__options
+// });
 
-const monthly_lineChart = $('#line_charts');
-let monthly_line_chart = doChart(monthly_lineChart, {
-    type: 'line',
-    data: monthly__lineChart__data,
-    options: lineChart__options
-});
+// const monthly_lineChart = $('#line_charts');
+// let monthly_line_chart = doChart(monthly_lineChart, {
+//     type: 'line',
+//     data: monthly__lineChart__data,
+//     options: lineChart__options
+// });
+
+
 
 const weekly_lineChart = $('#line_charts');
 let weekly_line_chart = doChart(weekly_lineChart, {

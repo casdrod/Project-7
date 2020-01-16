@@ -52,25 +52,43 @@ h1 {
     position: relative;
     display: inline-block;
     margin: auto 0;
-    transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 
 .dropdown-content {
-]   position: absolute;
-    background-color: black;
+    position: absolute;
+    left: -270px;
+    top: 40px;
+    background-color: #194265;
+    border-radius: 10px;
+    width: 300px;
+    max-height: 0px;
+    /* opacity: 0; */
+    transition: all .5s ease;
+    /* transition: opacity .25s ease; */
 }
 
-#drop {
-    width: 300px;
-    height: 1px;
+.single-notification {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0.5px solid black;
+    max-height: 0px;
     opacity: 0;
-    transition: all .75s ease;
+    transition: all .5s ease;
 }
 
-#drop.show {
+.notification-text {
+    margin-right: auto;
+    border: none;
+    max-height: 0px;
+}
+
+.dropdown-content.show,
+.single-notification.show,
+.notification-text.show {
     width: 300px;
-    height: 300px;
+    max-height: 500px;
     opacity: 1;
+    transition: all 2s ease;
 }
 
 .dropdown-notification {
@@ -86,16 +104,6 @@ h1 {
 
 .drop-down-close {
     margin: auto 10px;
-}
-
-.single-notification {
-    display: flex;
-    flex-wrap: wrap;
-    border-bottom: 
-}
-
-.message {
-    margin-right: auto;
 }
 
 .user-info {

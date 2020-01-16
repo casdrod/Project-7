@@ -31,8 +31,8 @@ for (var i = 0; i < btns.length; i++) {
 
 /* Adding Data to Chart Function */
 function addData(chart, label, data) {
-    chart.data.labels = label;
-    chart.data.datasets[0].data = data;
+    chart.config.data.labels = label;
+    chart.config.data.datasets[0].data = data;
     chart.update();
 }
 
@@ -40,21 +40,22 @@ function addData(chart, label, data) {
 /* Changing chart data */
 const trafficNav = document.querySelector('.traffic-nav');
 trafficNav.addEventListener('click', e => {
-    if (e.target.tagName === 'LI') {
-        let button = e.target;
-        if (button.textContent === 'Hourly') {
-             addData(hourly_line_chart, hourly__lineChart__data.labels, hourly__lineChart__data.datasets[0].data);
-        } else if (button.textContent === 'Daily') {
-             addData(daily_line_chart, daily__lineChart__data.labels, daily__lineChart__data.datasets[0].data);        
-        }  else if (button.textContent === 'Weekly') {
-             addData(weekly_line_chart, weekly__lineChart__data.labels, weekly__lineChart__data.datasets[0].data);      
-        } else if (button.textContent === 'Monthly') {
-             addData(monthly_line_chart, monthly__lineChart__data.labels, monthly__lineChart__data.datasets[0].data);
-        }
-    }
+    if (e.textContent === 'Hourly') {     
+        addData(weekly_line_chart, hourly__lineChart__data.labels, hourly__lineChart__data.datasets[0].data);
+     } else if (e.textContent === 'Daily') {
+        addData(weekly_line_chart, daily__lineChart__data.labels, daily__lineChart__data.datasets[0].data);
+     } else if (e.textContent === 'Weekly') {
+        addData(weekly_line_chart, weekly__lineChart__data__copy.labels, weekly__lineChart__data__copy.datasets[0].data); 
+     } else if (e.textContent === 'Monthly') {
+        addData(weekly_line_chart, monthly__lineChart__data.labels, monthly__lineChart__data.datasets[0].data);
+     }
 });
 
+
 /* Dropdown Notifications when clicking on Bell Icon */
-$(".bell").on('click', function() {
-    $("#drop").toggleClass('show');
+$(".bell-svg").on('click', function() {
+    $(".dropdown-content").toggleClass('show');
+    $(".single-notification").toggleClass('show');
+    $(".notification-text").toggleClass('show');
+
 });
