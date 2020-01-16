@@ -55,13 +55,6 @@ trafficNav.addEventListener('click', e => {
 });
 
 /* Dropdown Notifications when clicking on Bell Icon */
-const dropDown = document.querySelector(".drop-down");
-const dropDownContent = document.querySelector(".dropdown-content");
-
-dropDown.addEventListener('click', e => {
-    const element = e.target;
-    if (element.classList.contains("bell-svg")) {
-        dropDownContent.style.display = "block";
-        dropDown.style.display = "block";
-    }
+$(".bell").on('click', function() {
+    $("#drop").toggleClass('show');
 });
