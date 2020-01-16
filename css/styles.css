@@ -8,6 +8,7 @@ header {
     flex-wrap: wrap;
     background-color: #6A6CCF;
     color: white;
+    line-height: 30px;
 }
 
 /**** Header Section ****/
@@ -18,17 +19,25 @@ h1 {
 }
 
 .bell {
-    margin: 0 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding: 5px;
+    margin: auto 0;
 }
+
+/* .bell:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition-property: all;
+    transition-duration: 0.3s;
+} */
 
 .bell-svg {
     display: block;
 }
 
-.notification {
+.notification-alert {
     position: relative;
     border-radius: 50%;
     width: 1px;
@@ -37,6 +46,37 @@ h1 {
     padding: 3px;
     top: -10px;
     left: -5px;
+}
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+    margin: auto 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 300px;
+    z-index: 1;
+    background-color: black;
+}
+
+.dropdown-notification {
+    position: relative;
+    border-radius: 50%;
+    width: 1px;
+    height: 1px;
+    background-color: limegreen;
+}
+
+.single-notification {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.message {
+    margin-right: auto;
 }
 
 .user-info {
