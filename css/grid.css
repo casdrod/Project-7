@@ -88,6 +88,40 @@ main {
 }
 
 /**** Media Queries ****/
+@media (min-width: 400px) {
+    header {
+        line-height: 30px;
+    }
+
+    h1 {
+        margin: 10px auto 10px 10px;
+    }
+
+    .dropdown-content {
+        left: -120px;
+    }
+
+    .user-info {
+        margin: 0;
+        border-left: 0.5px solid black;
+        padding: 5px;
+    }
+
+    .alert {
+        height: 20px;
+        width: calc(100% - 85px);
+    }
+    
+    .traffic-nav {
+        margin: 0;
+    }
+
+    .traffic-nav-link {
+        margin: 5px;
+        padding: 5px 10px;
+    }
+}
+
 @media (min-width: 768px) {
     .container {
         grid-template-columns: 60px 1fr;
@@ -110,21 +144,27 @@ main {
             "message settings"
     }
 
-    /*** Styles ***/
-    nav {
-        display: inline;
-    }
+    /****** Styles ******/
 
-    .nav-icon:first-child {
+    /*** Nav Bar ***/
+    .icons {
+        position: sticky;
+        padding-top: 10px;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+      }
+
+    .selected {
         border-left: 3px solid limegreen;
         border-bottom: none;
     }
 
+    /*** Sections ***/
     .social-text {
         margin-left: 15px;
     }
-
-    .daily {}
 
     .mobile-users {
         border-top: .75px solid black;
@@ -135,16 +175,17 @@ main {
         border-left: .75px solid black;
     }
 
+    .settings {
+        border-left: 0.75px solid black;
+    }
+
+    /*** Charts ***/
     .widget-container-full {
         width: calc(90vw - 20px);
     }
 
     .widget-container-half {
         width: calc(45vw - 20px);
-    }
-
-    .settings {
-        border-left: 0.75px solid black;
     }
 }
 

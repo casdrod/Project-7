@@ -24,15 +24,7 @@ const lineChart__options = {
         display: false
     },
     scales: {
-        xAxes: [{
-            gridLines: {
-                // offsetGridLines: true
-            }
-        }],
         yAxes: [{
-            gridLines: {
-                // offsetGridLines: true
-            },
             ticks: {
                 min: 250,
                 max: 2500,
@@ -94,9 +86,8 @@ var dntChart__options = {
     }
 }
 
-
-/* ****************** /
-/* ****Chart Data**** */
+/* ****************** */
+/* ****CHART DATA**** */
 /* ****************** */
 
 /* **** Line Charts **** */
@@ -111,7 +102,12 @@ const weekly__lineChart__data = {
             'rgba(255, 206, 86, 0.2)',
             'rgba(75, 192, 192, 0.2)',
             'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)'
         ],
         borderColor: [
             'rgba(255, 99, 132, 1)',
@@ -119,7 +115,12 @@ const weekly__lineChart__data = {
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
             'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
+            'rgba(255, 159, 64, 1)',
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)'
         ],
         borderWidth: 1
     }]
@@ -136,7 +137,12 @@ const weekly__lineChart__data__copy = {
             'rgba(255, 206, 86, 0.2)',
             'rgba(75, 192, 192, 0.2)',
             'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)'
         ],
         borderColor: [
             'rgba(255, 99, 132, 1)',
@@ -144,7 +150,12 @@ const weekly__lineChart__data__copy = {
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
             'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
+            'rgba(255, 159, 64, 1)',
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)'
         ],
         borderWidth: 1
     }]
@@ -161,7 +172,12 @@ const hourly__lineChart__data = {
             'rgba(255, 206, 86, 0.2)',
             'rgba(75, 192, 192, 0.2)',
             'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)'
         ],
         borderColor: [
             'rgba(255, 99, 132, 1)',
@@ -169,7 +185,12 @@ const hourly__lineChart__data = {
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
             'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
+            'rgba(255, 159, 64, 1)',
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)'
         ],
         borderWidth: 1
     }]
@@ -186,7 +207,8 @@ const daily__lineChart__data = {
             'rgba(255, 206, 86, 0.2)',
             'rgba(75, 192, 192, 0.2)',
             'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 99, 132, 0.2)'
         ],
         borderColor: [
             'rgba(255, 99, 132, 1)',
@@ -194,7 +216,8 @@ const daily__lineChart__data = {
             'rgba(255, 206, 86, 1)',
             'rgba(75, 192, 192, 1)',
             'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
+            'rgba(255, 159, 64, 1)',
+            'rgba(255, 99, 132, 1)'
         ],
         borderWidth: 1
     }]
@@ -206,6 +229,12 @@ const monthly__lineChart__data = {
         label: '',
         data: [1000, 900, 1600, 1350, 1100, 700, 950, 1500, 1450, 2000, 1400, 2000],
         backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
             'rgba(255, 206, 86, 0.2)',
@@ -264,29 +293,9 @@ var dntChart__data = {
     ]
 }
 
-
-// const hourly_lineChart = $('#line_charts');
-// let hourly_line_chart = doChart(hourly_lineChart, {
-//     type: 'line',
-//     data: hourly__lineChart__data,
-//     options: lineChart__options
-// });
-
-// const daily_lineChart = $('#line_charts');
-// let daily_line_chart = doChart(daily_lineChart, {
-//     type: 'line',
-//     data: daily__lineChart__data,
-//     options: lineChart__options
-// });
-
-// const monthly_lineChart = $('#line_charts');
-// let monthly_line_chart = doChart(monthly_lineChart, {
-//     type: 'line',
-//     data: monthly__lineChart__data,
-//     options: lineChart__options
-// });
-
-
+/* *********************** */
+/* ****CREATING CHARTS**** */
+/* *********************** */
 
 const weekly_lineChart = $('#line_charts');
 let weekly_line_chart = doChart(weekly_lineChart, {
@@ -294,7 +303,6 @@ let weekly_line_chart = doChart(weekly_lineChart, {
     data: weekly__lineChart__data,
     options: lineChart__options
 });
-
 
 
 const barChart = $("#daily-chart");
