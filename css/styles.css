@@ -43,7 +43,9 @@ h1 {
 
 /**** Green Dot Notification Alert ****/
 .notification-alert {
-    position: relative;
+    position: absolute;
+    top: -1px;
+    left: 20px;
 }
 
 .dropdown-notification-alert {
@@ -57,8 +59,8 @@ h1 {
     height: 1px;
     background-color: limegreen;
     padding: 3px;
-    top: -10px;
-    left: -5px;
+    /* top: -10px;
+    left: -5px; */
 }
 
 /**** Drop down Notification Bar ****/

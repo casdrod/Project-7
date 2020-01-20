@@ -3,19 +3,15 @@ $(".bell-svg").on('click', function() {
     $(".dropdown-content").toggleClass('show');
     $(".single-notification").toggleClass('show');
     $(".notification-text").toggleClass('show');
+    $(".notification-alert").hide();
 });
 
-const singleNotifications = document.querySelectorAll("single-notification");
-
 /* single-notification will close when 'x' is clicked */
-for (var i = 0; i < singleNotifications.length; i++) {
-    singleNotifications[i].addEventListener('click', e => {
-        const element = e.target;
-        if (element.classList.contains("drop-down-close")) {
-            singleNotifications[i].className.replace(" show", "");
-        }
-    });
-}
+
+$(".drop-down-close").on('click', function() {
+  $(this).parent().hide();
+})
+
 
 ////* Nav Links *////
 const navLink = document.querySelectorAll(".nav-icon");
