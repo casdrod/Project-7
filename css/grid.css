@@ -123,6 +123,10 @@ main {
 }
 
 @media (min-width: 768px) {
+    html {
+        scroll-padding-top: 0px;
+    }
+
     .container {
         grid-template-columns: 60px 1fr;
         grid-template-areas: 
@@ -168,15 +172,19 @@ main {
 
     .mobile-users {
         border-top: .75px solid black;
-        border-left: .75px solid black;
     }
 
-    .recent-activity {
-        border-left: .75px solid black;
-    }
-
+    .mobile-users,
+    .recent-activity,
     .settings {
-        border-left: 0.75px solid black;
+        border-left: .75px solid black;
+    }
+
+    .members,
+    .recent-activity,
+    .message,
+    .settings {
+        padding: 10px 15px;
     }
 
     /*** Charts ***/

@@ -7,18 +7,20 @@ $(".bell-svg").on('click', function() {
 
 const singleNotifications = document.querySelectorAll("single-notification");
 
+/* single-notification will close when 'x' is clicked */
 for (var i = 0; i < singleNotifications.length; i++) {
-    singleNotifications[i].addEventListener("click", e => {
-        if (e.target.classList.contains("drop-down-close")) {
+    singleNotifications[i].addEventListener('click', e => {
+        const element = e.target;
+        if (element.classList.contains("drop-down-close")) {
             singleNotifications[i].className.replace(" show", "");
         }
     });
 }
 
-
-/* Nav Links */
+////* Nav Links *////
 const navLink = document.querySelectorAll(".nav-icon");
 
+/* Adding 'selected' class to navlink when clicked */
 for (var i = 0; i < navLink.length; i++) {
     navLink[i].addEventListener("click", function() {
         let current = document.getElementsByClassName("selected");
@@ -27,7 +29,7 @@ for (var i = 0; i < navLink.length; i++) {
     })
 };
 
-/* Applying active class to nav links */
+/* Applying active class to traffic nav links */
 const btns = document.getElementsByClassName("traffic-nav-link");
 const canvas_div = document.querySelector('.widget-container-full');
 const canvas = canvas_div.lastChild;
@@ -40,7 +42,7 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
-/* Alert Banner */
+////* Alert Banner *////
 $('#alert').hide();
 $('#alert').slideDown(1500);
 
@@ -57,13 +59,13 @@ alertBanner.addEventListener('click', e => {
     }    
 });
 
+////* Top Traffic Chart *////
 /* Adding Data to Chart Function */
 function addData(chart, label, data) {
     chart.config.data.labels = label;
     chart.config.data.datasets[0].data = data;
     chart.update();
 }
-
 
 /* Changing chart data */
 const trafficNav = document.querySelector('.traffic-nav');
@@ -82,24 +84,33 @@ trafficNav.addEventListener('click', e => {
     }
 });
 
-/* Message Section */
+////* Message Section *////
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
 
+////* Send Button Actions *////
 send.addEventListener('click', e => {
     if (user.value === "" && message.value === "") {
         alert("ERROR: Please fill out both Search and Message fields.");
     } else if (user.value === "" && message.value != "") {
         alert("ERROR: Please search for user.");
     } else if (user.value != "" && message.value === "") {
-        alert("ERROR: Please type a message for user.");
+        alert(`ERROR: Please type a message for ${user.value}.`);
     } else {
         alert(`Message successfully sent to: ${user.value}`);
+        eraseText();
     }
 })
 
-/* Drop down user list */
+/* Erase User and Message fields when message was successfully sent */
+function eraseText() {
+  document.getElementById("userField").value = "";
+  document.getElementById("messageField").value = "";
+}
+
+
+////* Drop down user list *////
 /* Users Array*/
 var users = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
 
@@ -201,16 +212,3 @@ function autocomplete(inp, arr) {
 }
 
 autocomplete(document.getElementById("userField"), users);
-
-/* Save Button */
-var emailSwitch = document.getElementById('email-switch');
-var profileSwitch = document.getElementById('profile-switch');
-
-function saveData() {
-  localStorage.setItem("email", emailSwitch);
-  console.log(localStorage);
-}
-
-// window.addEventListener("load", e => {
-//   localStorage.getItem("email");
-// })
