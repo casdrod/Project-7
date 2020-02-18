@@ -176,42 +176,7 @@ a {
     outline: none;
 }
 
-/**** Nav Section ****/
-nav {
-    justify-content: center;
-    background-color: #194265;
-    margin: 0;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
 
-.icons {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: auto;
-    justify-content: center;
-    list-style: none;
-}
-
-nav li {
-    margin: auto;
-}
-
-nav ul li a {
-    display: block;
-}
-
-.nav-icon {
-    padding: 10px;
-    margin: 0 5px;
-}
-
-.selected {
-    border-bottom: 3px solid limegreen;
-    transition: 0.5s;
-}
 
 /**** Alert Banner ****/
 .alert {
@@ -268,31 +233,6 @@ nav ul li a {
     flex-wrap: wrap;
 }
 
-.traffic-nav {
-    margin: 10px auto;
-    padding: 0;
-}
-
-.traffic-nav-link {
-    list-style: none;
-    margin: 3px;
-    padding: 5px 7px;
-    cursor: pointer;
-    color: white;
-    background-color: #194265;
-    border-radius: 16px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-/**** Active Traffic Nav Link ****/
-.active {
-    background-color: #56D93D;
-    color: black;
-    box-shadow: 2px 2px gray;
-    font-weight: 400;
-    transition-property: all 0.5s linear;
-}
-
 /**** Daily Traffic Section ****/
 .daily {
     border-top: .75px solid black;
@@ -340,7 +280,7 @@ nav ul li a {
     flex-grow: 1;
     border: 0.5px solid black;
     margin: 10px;
-    background-color: #F6F6F6
+    background-color: #F6F6F6;
 }
 
 .social-text p:first-child {
@@ -441,73 +381,8 @@ button {
 }
 
 /* User Input Autocomplete */
-.autocomplete {
-    position: relative;
-}
 
-.autocomplete-items {
-    position: absolute;
-    z-index: 99;
-    top: 100%;
-    left: 0;
-    right: 0;
-}
 
-.autocomplete-items div {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    border: 1px solid #CECECE;
-    border-top: none;
-    border-radius: 5px;
-}
-
-/* When hovering over autocomplete item*/
-.autocomplete-items div:hover {
-    background-color: #F4F4F4;
-}
-
-/* When navigating through the items using the arrow keys */
-.message-field {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 5px 0;
-    height: 99px;
-}
-
-.timezone-field {
-    margin-top: 24px;
-}
-
-.user-field,
-.message-field,
-.timezone-field {
-    width: 100%;
-    padding: 10px;
-    border: .6px solid #CECECE;
-    border-radius: 5px;
-    background-color: #F4F4F4;
-    box-sizing: border-box;
-}
-
-.user-field:focus,
-.message-field:focus,
-.timezone-field:focus {
-    border: 1px solid black;
-    border-radius: 5px;
-    outline: none;
-    background-color: #fff;
-}
-
-.autocomplete-active {
-    background-color: #6A6CCF !important;
-    color: #fff;
-}
-
-/* Send Button */
-#send {
-    width: 100%;
-    margin: 5px 0;
-}
 
 /**** Settings Section ****/
 .settings {
@@ -524,123 +399,5 @@ button {
     margin: 10px auto 10px 0;
 }
 
-/**** Toggle Switches ****/
-/* The switch - the box around the slider */
-.switch {
-    margin: auto 0 auto auto;
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-}
 
-/* Hide default HTML checkbox */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 17px;
-    width: 17px;
-    left: 3px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-}
-
-input:checked + .slider {
-    background-color: #6A6CCF;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #6A6CCF;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-.on {
-    display: none;
-    left: 30%;
-}
-
-.off {
-    left: 70%;
-}
-
-.on,
-.off {
-    color: white;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    font-size: 10px;
-    font-family: Verdana, sans-serif;
-}
-
-input:checked+ .slider .on {
-    display: block;
-}
-
-input:checked + .slider .off {
-    display: none;
-}
-  
-/* Rounded sliders */
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
-
-/* Buttons */
-.settings-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 15px;
-    margin: 5px 0 0 0;
-}
-
-#save {
-    width: 100%;
-    margin: 10px 0;
-}
-
-.button-primary {
-    background-color: #194265;
-}
-
-.button-disabled {
-    width: 100%;
-    background-color: grey;
-}
-
-.button-primary,
-.button-disabled {
-    border-radius: 8px;
-    margin: auto;
-    padding: 10px;
-    color: white;
-    outline: none;
-    box-shadow: none;
-}
 

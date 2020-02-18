@@ -14,10 +14,18 @@ $(".drop-down-close").on('click', function() {
 
 
 ////* Nav Links *////
-const navLink = document.querySelectorAll(".nav-icon");
+const navLinks = document.querySelectorAll(".nav-icon");
 
 /* Adding 'selected' class to navlink when clicked */
-for (var i = 0; i < navLink.length; i++) {
+navLinks.forEach(navLink => {
+  navLink.addEventListener("click", function() {
+    let current = document.getElementsByClassName("selected");
+    current[0].className = current[0].className.replace(" selected", "");
+    this.className += " selected"; 
+  })
+})
+
+for (var i = 0; i < navLinks.length; i++) {
     navLink[i].addEventListener("click", function() {
         let current = document.getElementsByClassName("selected");
         current[0].className = current[0].className.replace(" selected", "");
