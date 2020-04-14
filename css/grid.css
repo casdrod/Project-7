@@ -89,21 +89,13 @@ main {
 
 /**** Media Queries ****/
 @media (min-width: 400px) {
-    /* header {
-        line-height: 30px;
-    } */
-
-    h1 {
-        margin: 10px auto 10px 10px;
-    }
-
     .dropdown-content {
         left: -120px;
     }
 
     .user-info {
         margin: 0;
-        border-left: 0.5px solid black;
+        border-left: 0.5px solid #194265;
         padding: 5px;
     }
 
